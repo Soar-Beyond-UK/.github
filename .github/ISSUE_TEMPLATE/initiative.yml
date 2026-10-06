@@ -1,0 +1,59 @@
+name: Initiative
+description: A new tool, a new kind of personal data, an outside integration, or more than about 3 issues of work
+type: Initiative
+projects: ["soar-beyond-uk/1"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Initiatives move through the SDLC phases on the board's Phase field: Idea, Discovery, Design, Plan, Build, Release, Operate, Retire. Process: soar-beyond-uk/delivery `docs/sdlc.md`.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: In the requester's words where possible.
+    validations:
+      required: true
+  - type: input
+    id: requester
+    attributes:
+      label: Requester
+  - type: textarea
+    id: success
+    attributes:
+      label: Success measure
+      description: What will be true when this has worked. Filled in during Discovery.
+  - type: textarea
+    id: ice
+    attributes:
+      label: ICE score (Discovery)
+      value: |
+        Impact (1-10):
+        Confidence (1-10):
+        Ease (1-10):
+        Score:
+  - type: dropdown
+    id: dpia
+    attributes:
+      label: Data protection screen (Design)
+      description: Does this store or process personal or patient data?
+      options:
+        - Not screened yet
+        - No personal or patient data
+        - Personal data, DPIA check needed
+        - Patient data, DPIA check needed
+  - type: textarea
+    id: links
+    attributes:
+      label: Links
+      value: |
+        - Spec (docs/specs/):
+        - Plan (docs/plans/):
+        - ADRs:
+  - type: checkboxes
+    id: data
+    attributes:
+      label: Data check
+      options:
+        - label: I haven't included patient data, passwords or personal details.
+          required: true

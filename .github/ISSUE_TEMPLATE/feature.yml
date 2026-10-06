@@ -1,0 +1,47 @@
+name: Feature or change
+description: A change to how an existing tool works
+type: Feature
+projects: ["soar-beyond-uk/1"]
+body:
+  - type: textarea
+    id: who
+    attributes:
+      label: Who has the problem
+      description: Which people or team, and how often it comes up.
+    validations:
+      required: true
+  - type: textarea
+    id: trying
+    attributes:
+      label: What they are trying to do
+      description: The job they need done, not the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: good
+    attributes:
+      label: What good looks like
+      description: How we will know it's fixed.
+    validations:
+      required: true
+  - type: textarea
+    id: ready
+    attributes:
+      label: Definition of Ready (filled in at triage)
+      description: Needed before this can move to Ready.
+      value: |
+        ### Acceptance criteria
+        - [ ] 
+
+        ### How to test
+
+        ### Out of scope
+
+        ### Area of the code
+  - type: checkboxes
+    id: data
+    attributes:
+      label: Data check
+      options:
+        - label: I haven't included patient data, passwords or personal details.
+          required: true

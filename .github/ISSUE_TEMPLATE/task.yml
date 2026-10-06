@@ -1,0 +1,31 @@
+name: Task
+description: Technical work such as dependencies, refactors or setup
+type: Task
+projects: ["soar-beyond-uk/1"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What needs doing and why
+    validations:
+      required: true
+  - type: textarea
+    id: ready
+    attributes:
+      label: Definition of Ready
+      value: |
+        ### Acceptance criteria
+        - [ ] 
+
+        ### How to test
+
+        ### Out of scope
+
+        ### Area of the code
+  - type: checkboxes
+    id: data
+    attributes:
+      label: Data check
+      options:
+        - label: I haven't included patient data, passwords or personal details.
+          required: true

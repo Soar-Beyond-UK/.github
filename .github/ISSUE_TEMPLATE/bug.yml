@@ -1,0 +1,40 @@
+name: Bug
+description: Something in a tool is broken or behaving wrongly
+type: Bug
+projects: ["soar-beyond-uk/1"]
+body:
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened
+      description: What you saw, including any error message.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to ...
+        2. Click ...
+        3. See ...
+    validations:
+      required: true
+  - type: input
+    id: blocked
+    attributes:
+      label: Who is blocked, and how badly
+      placeholder: e.g. All PMs can't submit 1:1 notes
+  - type: checkboxes
+    id: data
+    attributes:
+      label: Data check
+      options:
+        - label: I haven't included patient data, passwords or personal details.
+          required: true
